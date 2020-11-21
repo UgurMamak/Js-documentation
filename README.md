@@ -106,6 +106,7 @@ değişkenlerin ve değerlerin view tarafına aktarımıdır. React'ta JSX taraf
 **two-way binding**
 
 ![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/3.jpg)
+
 View tarafına aktarılan data arka taraftanda dinlenmektedir. data<=>view olayına denir [3].
 
 ![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/4.png)
