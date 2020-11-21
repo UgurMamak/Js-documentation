@@ -1,52 +1,56 @@
-# react-documentation
 # React Dokümantasyon
-```
-![alt text](http://url/to/img.png)
-```
+
  1. [DOM](#DOM)
  2.  [Virtual DOM](#Virtual-DOM)
  3. [One-Way Binding  ve Two-Way Binding](One-Way-binding-ve-Two-Way-Binding)
  4. [EcmaScript 6 Bilinmesi Gerekenler](#EcmaScript-6-Bilinmesi-Gerekenler)
 	 - [Spread Operatör](#Spread-Operatör)
-	 - [Array.map() Operatör]()
-	 - [Array.Filter Operatör]()
-	- [Object.assign]()
- 5. [Babel Nedir?]()
- 6. [Webpack Nedir?]()
- 7. [Create React App]()
- 8. [Propslar]()
-	- [PropTypes]()
+	 - [Array.map() Operatör](#Map-Operatör)
+	 - [Array.Filter Operatör](#Filter-Operatör)
+	- [Object.assign](#Object-assign-[])
+ 5. [Babel Nedir?](#Babel-Nedir?)
+ 6. [Webpack Nedir?](#Webpack-Nedir?)
+ 7. [Create React App](#Create-React-App)
+ 8. [Propslar](#Propslar)
+	- [PropTypes](#PropTypes)
  9. [Eventler](#Events)
- 10. [State'ler]()
-	  - [Statefull ve stateless componentler]()
- 11. [Lifecycle (Yaşam Döngüsü)](#Lifecycle (Yaşam Döngüsü))
-	  - [Initialization]()
-		  - [constructor]()
-	  - [Mounting]()
-		  - [componentWillMount]()
-		  -  [componentDidMount]()
-		  -  [componentWillReceiveProps]()
-		  -  [ShouldcomponentUpdate]()
-	  - [Updation]()
-		  - [ComponentWillUpdate]()
-		  - [ComponentDidUpdate]()
+ 10. [State'ler](#State'ler )
+	  - [Statefull ve stateless componentler](#Statefull-ve-Statelesss-Componentler)
+ 11. [Lifecycle (Yaşam Döngüsü)](#Lifecycle)
+	  - [Initialization](#Initialization)
+		  - [constructor](#Initialization)
+	  - [Mounting](#Mounting)
+		  - [componentWillMount](#componentWillMount)
+		  -  [componentDidMount](#componentDidMount)
+	  - [Updation](#Updation)
+	  	  -  [componentWillReceiveProps](#componentWillReceiveProps)
+		  -  [ShouldcomponentUpdate](#shouldComponentUpdate)
+		  - [ComponentWillUpdate](#componentWillUpdate)
+		  - [ComponentDidUpdate](#componentDidUpdate)
 12. [Fetching](#Fetching)
-13. [React Router]()
-14. [High Order Component (HOC)]()
-15. [Pure component]()
-16. [Redux]()
-	  - [Action]()
-	  - [Reducer]()
-	  - [Merge Props]()
-	  - [Redux Thunk Middleware]()
-	  - [Immutable Mutable]()
-	  - [Immutable Array]()
-	  - [Redux Logger Middleware]()
-	  - [Async Action Pattern]()
-	  - [Async Actions Pattern Redux Promise Middleware]()
-17. [AsyncAwait Yapısı ile Servis Çağrımı]()
+13. [React Router](#React-Router)
+	- [Link](#Link )
+	- [Redirect](#Redirect) 
+	- [Switch](#switch)
+14. [High Order Component](#High-Order-Component)
+15. [Pure component](#Pure-Component)
+16. [Redux](#Redux)
+	  - [Action](#Action)
+	  - [Reducer](#Reducer)
+	  - [Store](#Store)
+	  - [Merge Props](#Merge-props)
+	  - [Redux Thunk Middleware](#Redux-Thunk-Middleware)
+	  - [AsyncAwait-Yapısı-ile-Servis-Çağrımı](#AsyncAwait-Yapısı-ile-Servis-Çağrımı)
+	  - [Immutable Mutable](#Immutable-Mutable)
+	  - [Immutable Array](#Immutable-Array)
+	  - [Redux Logger Middleware](#Redux-Logger-Middleware)
+	  - [Async Action Pattern](#Async-Action-Patterns)
+	  - [Async Actions Pattern Redux Promise Middleware](#Redux-Promise-Middleware)
+17. [NOTLAR](#NOTLAR)
+18. [Kısaltmalar](#Kısaltmalar)
+19. [#Kaynakça](#Kaynakça)
 
-![alt text]("img-url")
+
 
 
 
@@ -100,9 +104,11 @@ değişkenlerin ve değerlerin view tarafına aktarımıdır. React'ta JSX taraf
 	  export default  App;
 
 **two-way binding**
-3.resimi buraya ekle.
+
+![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/3.jpg)
 View tarafına aktarılan data arka taraftanda dinlenmektedir. data<=>view olayına denir [3].
-4.resmi buraya ekle
+
+![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/4.png)
 
 ## EcmaScript 6 Bilinmesi Gerekenler
 Ecmascript javascript dilinin standartlaştırılmış sürümünün adıdır.
@@ -144,7 +150,7 @@ Bir array'i kopyalamak için slice metodu kullanılıyordu. yenisinde kullanım 
 
     [...document.querySelectorAll('div')]
 
-## Map Operatör [5]
+### Map Operatör
 Array üzerinde gezinme ve işlem yapabilmek için kullanılır. 
 
 > Map array'in kopyasını alarak üzerinde işlem yapar. Foreach direk array üzerinde çalışır.
@@ -158,7 +164,7 @@ Array üzerinde gezinme ve işlem yapabilmek için kullanılır.
     // expected output: Array [2, 8, 18, 32]
 
 
-## Filter Operatör [6]
+### Filter Operatör
 data içerisinde filtreleme yapmak için kullanılır.
 
     const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
@@ -166,7 +172,7 @@ data içerisinde filtreleme yapmak için kullanılır.
     console.log(result);
     // expected output: Array ["exuberant", "destruction", "present"]
 
-## Object assign []
+### Object assign []
 Objectleri birbiri üzerine kopyalanmasını sağlayan fonksiyondur.
 
 Object.assign(hedef_nesne, ..._kaynak_nesneler_)
@@ -186,27 +192,27 @@ Object.assign(kopyalandığı yer, kopyalanan data)
 
 > nesneleri birbirine eşitleyerek atama işlemi yapabiliriz. Fakat bu şekilde kullanım olursa yukarıdaki gibi personel2'nin değerini değiştirdiğimizde personel değişkeninin de değeri değişir. Çünkü **Javascript’te array ve object tipleri referanstır.** Yani değişkenler, bilgilerin bellekteki adreslerini tutarlar.
 
-# Babel Nedir?
+## Babel Nedir?
 ES6 standdartını ES5 standartına çevirmeyi sağlar. ES6 bütün tarayıcılarda uyumlu olmadığı için bütün tarayıcılarda uyumlu olan ES5'e dönüştürerek kodların çalışabilir olmasını sağlayan açık kaynak kodlu javascript  transcompilerdır.
  
     npm i babel-cli babel-preset-es2015 --save 
     
     start:"babel-node index.js --preset es2015" (package.json'da scripts içine yazılır.)
 
-# Webpack Nedir?
+## Webpack Nedir?
 Modül paketleyicisidir. Proje altındaki tüm js, stil, resim vb dosyaları alarak tek bir dosya altında birleştirir.
 Daha hızlı yeniden oluşturma için yanlızca src içindeki dosyalar webpack tarafından işlenir. Herhangi bir js ve css dosyasını src içine koymanız gerekir, aksi taktirde webpack bunları görmez.
 
 
 
-# Create React App
+## Create React App
 React kullanıcı arayüzü oluşturmak için kullanılan js kütüphanesidir. Framework değildir. View katmanına odaklanır.
 
     npm install -g create-react-app (react pc'ye kurulumu sağlar)
     npx create-react-app project-name (proje isimlendirme küçük harf olmak zorunda)
     npm start (uygulamayı başlatır.)
 
-# Propslar
+## Propslar
 props: Bir componentten farklı bir componente aktarılan data'ya props denir. Props read only'dir yani üzerinde değişiklik yapılamaz sadece okunabilirdir.
 
 state:bir componentin kendisine ait olan data'larına state denir.
@@ -254,7 +260,7 @@ Componente gelen propsların içeriklerini, özelliklerini belirlememize yarar.
 
 
 
-# Events
+## Events
 Context Binding İşlemi
 
     // 1.yöntem
@@ -281,7 +287,7 @@ Context Binding İşlemi
     addButton(){}
     {()=>this.addButton()} //JSX'te çağırma şekli
 
-# State'ler 
+## State'ler 
 Uygulama içinde dataları tutan js objesidir. Her state değişikliğinde component render edilmektedir.
 
     // React'ın 16.versiyon öncesinde constructor içinde tanımlama yapılıyordu.
@@ -299,14 +305,16 @@ Uygulama içinde dataları tutan js objesidir. Her state değişikliğinde compo
     //State güncelleme işlemi
     this.setState({name:"Mamak"}) 
 
-**Statefull ve Statelesss Componentler**
+### Statefull ve Statelesss Componentler
 
 **Statefull comp.’’ler constructor’da başlatılan bir state’e sahiptir.** statefull component denilen, kendi içinde state tanımı mevcut olan componentin her state'i değiştiğinde componentin **render** fonksiyonunun tekrardan çalışmasını sağlar.
 
 Statefull ve stateless component arasındaki fark birinde state olması diğerinde olmamasıdır. Statefull componentler değişen stateleri takip ederken, stateless componentler kendilerine verilen props aracılığıyla yazdırır veya her zaman aynı şeyi yazdırır yani render işlemi olmaz [7].
 
-# 5.resmi buraya ekle (stateful comp örn)
-# 6.resmi buraya ekle (stateless comp örn)
+![stateful component örn](https://github.com/UgurMamak/react-documentation/blob/master/images/5.png)
+
+![stateless component örn](https://github.com/UgurMamak/react-documentation/blob/master/images/6.png)
+
 Görselde Stateless component bir function olarak yazılmıştır. Bileşenleri olabildiğince basit ve stateless hale getirmeliyiz.
 
 **Bir Bileşeni statefull veya stateless yazacağımıza nasıl karar veriririz?**
@@ -314,28 +322,30 @@ Bilgilerin dinamik olarak değişeceği componente ihtiyaç duyuyorsak statefull
 
 Bilgi tamamen durağansa ve hiç değişmeyeceğini biliyorsak bu componenti presentational component şeklinde yazmak daha mantıklı olur [7].
 
-# 7.resimi buraya ekle (üst cümle için)
 
+![stateless component örn](https://github.com/UgurMamak/react-documentation/blob/master/images/7.png)
 
-# Lifecycle (Yaşam Döngüsü)
-# 8.resimi buraya ekle
- **Initialization**
+## Lifecycle
+
+![stateless component örn](https://github.com/UgurMamak/react-documentation/blob/master/images/8.png)
+
+ ### Initialization
  constructor kısmını ifade eder.  Initial state'ler bind işlemleri tanımlanır. constructor bir kere çalışır.
 
-**Mounting**
+### Mounting
 DOM yaratılınca, insert işlemleri gerçekleşince çağrılan metodlardır.
-**componentWillMount**
+#### componentWillMount
 render'dan önce tetiklenir. (VDOM'dan DOM'a akratım gerçekleşmeden önce çalışır) State değişimi yapılmaz hızlı çalışması gereken işlemler burada yapılabilir. 
 
 > NOT: Update geldiği için kullanılması önerilmiyor.
 
-**componentDidMount**
+#### componentDidMount
 render işleminden sonra çalışır.
 setState işlemleri, servis çağrıları,  Redux bağlantısı apiye bağlanma gibi işlemler burada yapılabilir. 
 
-**Updation**
+### Updation
 Bir componentin state veya props'unun update edilmesiyle tekrardan render edilmesi sonucu çağrılan methodlardır.
-**componentWillReceiveProps**
+#### componentWillReceiveProps
 Child component'e geçtiğimiz props üzerinde değişiklik olursa child component'te cwrp çalışır.
 
     componentWillReceiveProps(nextProps){//değişen props'u parametre olarak alır.
@@ -344,7 +354,7 @@ Child component'e geçtiğimiz props üzerinde değişiklik olursa child compone
 
 > NOT: CWRP çalışınca child component tekrar render edilir,.
 
-**shouldComponentUpdate**
+#### shouldComponentUpdate
 
  - Componentin render edilip edilmeyeceğini belirtebiliriz. 
  -   Component içinde state veya props değişikliği olduğunda SCU ile kontrol edebiliriz.
@@ -358,18 +368,18 @@ Child component'e geçtiğimiz props üzerinde değişiklik olursa child compone
         	    return true or false
             }
 
-**componentWillUpdate**
+#### componentWillUpdate
 
     componentWillUpdate(nextProps,nextState){}
 
 
-**componentDidUpdate**
+#### componentDidUpdate
 State veya props değişikliğinde çalışır. bir önceki state ve props değerlerine ulaşabiliriz. 
 Hali hazırdaki props değeri ile bir önceki props’u karşılaştırmak için idealdir.
 
     componentDidUpdate(prevProps,prevState){}
 
-# Fetching (Getirmek)
+## Fetching
 Javascript'in fonksiyonudur. Api'ye bağlanarak data çekme işlemleri yapılabilir. 
 
     fetch('url')
@@ -390,23 +400,24 @@ fetching kütüphanesidir.  https://github.com/axios/axios
 > https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
 
-# React Router
+## React Router
 https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom
 https://github.com/ReactTraining/react-router/tree/master/packages/react-router
 https://github.com/omergulcicek/react-router
+
 npm i react-router
 npm i react-router
 
-   import  {  BrowserRouter  as  Router,  Route,  Link,  NavLink,  Redirect,  Switch  }  from  'react-router-dom';
-    <BrowserRouter>
-        <Route path="/" exact component={App}> //exact Boolean değerdir. Path'in doğruluğuna bakar.
-          <Route path="about" component={About} strict /> //strict belli bir yapıya zorlamak anlamına gelir. path'in tam olarak eşleşmesi gerekir.
-           <Route path="contact" render={()=>{return (<div></div>)}}/>
-          <Route path="inbox" component={Inbox}>
-            <Route path="messages/:id" component={Message} /> /inbox/messages (şeklinde path oluşur.)
-          </Route>
-        </Route>
-      </BrowserRouter>
+       import  {  BrowserRouter  as  Router,  Route,  Link,  NavLink,  Redirect,  Switch  }  from  'react-router-dom';
+        <BrowserRouter>
+            <Route path="/" exact component={App}> //exact Boolean değerdir. Path'in doğruluğuna bakar.
+              <Route path="about" component={About} strict /> //strict belli bir yapıya zorlamak anlamına gelir. path'in tam olarak eşleşmesi gerekir.
+               <Route path="contact" render={()=>{return (<div></div>)}}/>
+              <Route path="inbox" component={Inbox}>
+                <Route path="messages/:id" component={Message} /> /inbox/messages (şeklinde path oluşur.)
+              </Route>
+            </Route>
+          </BrowserRouter>
 
   <br/>
   
@@ -417,25 +428,25 @@ npm i react-router
     }
    <br/>
    
-**Link** 
+### Link 
 
     <Link to="/">
     <Link to="/inbox">
     <Link to="/category/3"> //parametreli kullanımı
 
-   **NavLink**
+   ### NavLink
 Link ile aynı işlevi vardır tek farkı navlink style alabilmektedir. Link style alamaz.
 
     <NavLink to="/" exact activeStyle={{color:"green";}} >AnaSayfa</NavLink> //activeStyle yerine activeClassName kullanarak style yazılabilir.
 
-**Redirect** 
+### Redirect 
 Yönlendirme yapmak için kullanılır.
   
 
       <Route path="/profile" exact strict render={ () => (
         this.state.loggedIn ? ( <Profile/>) : (<Redirect to="/" />)
         )} />
-**switch**
+### switch
 Konumla eşleşen ilk `<Route>` veya `<Redirect>` childını oluşturur.
 
     <Switch>
@@ -444,7 +455,7 @@ Konumla eşleşen ilk `<Route>` veya `<Redirect>` childını oluşturur.
       <Route path="/:user" component={User}/>
       <Route component={NoMatch}/>
     </Switch>
-# High Order Component (HOC) 
+## High Order Component
 React'ta tekrar edilen yapıların tek bir yerden yönetilmesini sağlayan ileri düzey bir tekniktir. Bazı componentler ortak özellik veya fonksiyon vermek istersek, örneği loading kullanmak istiyorsak HOC yazarak istediğimiz componente loading işlemini ekleyebiliriz.
 İşlemleri tek bir yerden kontrol etmemizi sağlar. Generic bir yapı oluşturmamızı sağlar.
 
@@ -477,7 +488,7 @@ React'ta tekrar edilen yapıların tek bir yerden yönetilmesini sağlayan ileri
     export default LoaderHOC(Posts);
     Postss.js
 
-# Pure Component
+## Pure Component
 SCU yöntemini kullanması dışında component ile aynıdır. Bizim yerimize SCU yöntemini çalıştırır. shouldComponentUpdate nextState ve nextProps göre bileşenin önceki değerlerine göre değişip değişmediğini algılayıp burda **_forceUpdate_** olup olmayacağına karar vermeye çalışabilir. PureComponent türeyen bileşenlerde ise bu işlem **shallowly compares** ile kendisi karar verir. Ekstra kod yazmanız gerekmez [8]. 
 
 > NOT pure component'i her yerde kullanmamalıyız. shallowly compares işlemi maaliyetlidir. Pure component proje içerisinde stratejik noktalarda kullanılırsa avantajlıdır.
@@ -492,7 +503,7 @@ SCU yöntemini kullanması dışında component ile aynıdır. Bizim yerimize SC
         }
         export default  Posts 
         
-# Redux
+## Redux
 State yönetimini sağlayan  js kütüphanesidir.
 Redux ile **component drilling (component hiyerarşisi)** olayı ortadan kalkar.
 Redux belli bir noktaya kadar state geçmişini tutmaktadır.
@@ -502,9 +513,9 @@ Redux belli bir noktaya kadar state geçmişini tutmaktadır.
 > npm install redux 
 > npm install react-redux //kullandığın library'e göre değişkenlik gösterir.
 
-# 9.resimi buraya ekle
 
-**Action**
+![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/9.png)
+### Action
 Action’lar uygulama içerisinden store’a iletilen değişkenlerin bilgilerini tutarlar. `dispatch(action)`fonksiyonu ile store’a yazılırlar.  Actionlar js nesneleridir ve içerisinde **type ve payload** tutarlar.  type bilgisi değişken adı gibi, store yazılacak verinin tipini belirler (neyi güncellemesi gerektiğini adlandırır). payload ile de değişmesi gereken veriyi taşır [9].
 
     {
@@ -537,7 +548,7 @@ Uygulama büyüdükçe çok fazla action ortaya çıkacağı için type ifadeler
 
 `dispatch()` fonksiyonuna, store nesnesi üzerinden **store.dispatch()** şeklinde kullanımı ile direkt olarak erişilebilir. Fakat React uygulamalarında daha optimize render işlemleri için react-redux kütüphanesinin sunduğu **connect()** yardımcı fonksiyonu kullanılır. Çoklu action üreticilerinin tek seferde dispatch edilmesi için ise **bindActionCreators()** metodundan yararlanılabilir [9].
 
-**Reducer**
+### Reducer
 **State yönetimini sağlar.** Reduce'lar store'a gelen action sonucunda uygulamanın hangi state'inin değişeceğini ve nasıl değiştirileceğini belirler.  Action’dan gelen verileri süzgeçleyip store’da belirtilen veriyi güncellememizi sağlayan bir araç [9]. 
 Reducer temel olarak bir JavaScript fonksiyonudur ve önceki state ile action’ı alarak sonraki state’i üretir [9].
 
@@ -598,7 +609,8 @@ Reducer içerisinde yapılmaması gerekenler:
           })
 
 
-**combineReducers** Ayrı ayrı yazılmış olan reducer fonksiyonlarını tek bir çatı altına toplar.
+#### combineReducers 
+Ayrı ayrı yazılmış olan reducer fonksiyonlarını tek bir çatı altına toplar.
 
     import {combineReducers} from "redux";
     import PostListReducer from "./post/PostListReducer"
@@ -609,7 +621,7 @@ Reducer içerisinde yapılmaması gerekenler:
     });
     export default rootReducer;
 
-**store**
+### Store
  Actionlar state'ler üzerinde "Ne yapılacağını", reducerlar ise action'ları temel alarak ilgili state'in "Nasıl güncelleceğini" belirtirken, Store nesnesi ise bu iki elemanı bir araya getirecek bir yapı oluşturur [9]. Store'un sorumlulukları:
 -   Uygulama state’inin tutulması,
 -   `getState()` metodu ile state’e erişim sağlaması,
@@ -682,7 +694,7 @@ Uygulamada tek bir store bulunur. Uygulamada combineReducers() fonksiyonu çağ�
 
     export default connect(mapStateToProps, mapDispatchToProps)(PostDetail); //connect componenti store'a bağlama işlemini gerçekleştirir.
 
-**Merge props**
+### Merge props
 
      //hangi props'un nerden geldiğini öğrenebiliriz.
         const mergeProps=(propsFromState,propsFromDispatch,ownProps)=>{
@@ -695,7 +707,7 @@ Uygulamada tek bir store bulunur. Uygulamada combineReducers() fonksiyonu çağ�
 
 Componentler store'u dinler ve değişiklik olduğunda componentler render işlemlerini gerçekleştirebiliyorlar.
 
-##### Redux'ı library veya framework olmadan kullanma şekli 
+#### Redux'ı library veya framework olmadan kullanma şekli 
 [Devnot (Redux ile ilgili detatalı bilgi için incele) ](http://devnot.com/2018/redux-nedir/) 
 
     function rootReducer(state, action){
@@ -726,15 +738,15 @@ Componentler store'u dinler ve değişiklik olduğunda componentler render işle
 
     
 
+![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/10.png)
 
-# 10.resmi ekle
 Kısaca anlatmak gerekirse
 View katmanında action tetiklenir. (Button gibi)
 Action view'den gelen state'i store dispatch eder. (dispatch: action'daki datayı store' a göndermek anlamına gelir.)
 Reducer, store'dan güncellenecek state'i alır ve action'dan gelen type ve payload!a göre  değişikliği gerçekleştirir. Daha sonra tekrar store'a gönderir.
 Reducerlar pure function'dır yani etkisi yoktur tek bir veri dönerler.
 
-# Redux Thunk Middleware
+### Redux Thunk Middleware
 middleware: ara katman anlamına gelir. Asıl iş yapılmadan önce bu ara katmanda farklı bir iş yapılır sonra asıl iş gerçekleştirilir. 
 
  Servis çağrıları yapıp istek attığımızda isteğin ne zaman biteceği belli olmuyor. Async işlemler olduğunda middleware kullanarak async işlemi middleware'a veriyoruz işlem tamamlandığında middleware bize cevap dönüyor bizde kullanabiliyoruz. 
@@ -758,7 +770,7 @@ createStore yaratırken redux-thunk eklenmeli
     return createStore(rootReducer, allEnhancers)
      }
 
-# AsyncAwait Yapısı ile Servis Çağrımı
+### AsyncAwait Yapısı ile Servis Çağrımı
    Normal kullanım
 
     export function getUsers(){
@@ -784,7 +796,7 @@ Async await ile kullanım
 	    }
     }
 
-# Immutable Mutable
+### Immutable Mutable
 Objeler ve arrayler referans tiptir. Reducer'da state güncellediğimizde memory'deki alanı tamamının değiştirilmemesi gerekiyor. O anki kopyasını alıp üzerinde değişiklik yapıp ondan sonra return etmemiz gerekiyor.  Bu noktada redux'ta immutable geliştirimi yapmamız gerekiyor. 
 
     return {
@@ -795,7 +807,7 @@ Objeler ve arrayler referans tiptir. Reducer'da state güncellediğimizde memory
     // Object.assign({},state, count: state.count + action.payload)
    
    
-# Immutable Array
+### Immutable Array
 	values:[]
 	return {
 	    ...state,
@@ -804,7 +816,7 @@ Objeler ve arrayler referans tiptir. Reducer'da state güncellediğimizde memory
     
     };
 
-# Redux Logger Middleware
+### Redux Logger Middleware
 Önceki state, act.on ve action sonunda ki aktif state bilgilerini browser'a log olarak basmaya yarar.
 
     npm install redux-logger
@@ -816,7 +828,7 @@ Objeler ve arrayler referans tiptir. Reducer'da state güncellediğimizde memory
     const middleware = applyMiddleware(thunk, logger);
     const store = createStore(reducer, middleware);
 
-# Async Action Patterns
+### Async Action Patterns
 action işleminin başlatıldığını beklediğini ve  hata alma durumlarını action ver reducer'da kullanılması.
 Reducer'da olması gereken yapılar aşağıdaki gibi olabilir.
   
@@ -824,7 +836,7 @@ Reducer'da olması gereken yapılar aşağıdaki gibi olabilir.
     case  "FETCH_USERS_ERROR":
     case  "RECEIVE_USERS":
 
-# Redux Promise Middleware
+### Redux Promise Middleware
 Bizim yerimize  action dispatch eder.
 [incele](https://github.com/pburtchaell/redux-promise-middleware)
     npm install redux-promise-middleware
@@ -840,7 +852,7 @@ import reduxPromiseMiddleware from "redux-promise-middleware";
     
     });
 
-# NOTLAR
+## NOTLAR
 
     package.json = Proje hakkında bilgileri içeren bir dosyadır.
     Kurulumu için aşağıdaki kodu yazmak yeterlidir.
@@ -880,7 +892,7 @@ import reduxPromiseMiddleware from "redux-promise-middleware";
 
 
 
-# Kısaltmalar
+## Kısaltmalar
 npm : node package manager
 js: javascript
 dom: document object model
@@ -895,6 +907,7 @@ vdom: virtual dom
 [6](https://developer.mozilla.org/tr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 [7](https://programmingwithmosh.com/javascript/stateful-stateless-components-react/#:~:text=Stateful%20and%20stateless%20components%20have%20many%20different%20names.&text=The%20literal%20difference%20is%20that,always%20render%20the%20same%20thing.)
 [8](https://medium.com/frontend-development-with-js/class-component-function-component-hooks-37140f07e9f9)
-[9](http://devnot.com/2018/redux-nedir/
+[9](http://devnot.com/2018/redux-nedir/)
+
 
 
