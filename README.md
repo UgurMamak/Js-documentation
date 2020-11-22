@@ -253,7 +253,7 @@ Componente gelen propsların içeriklerini, özelliklerini belirlememize yarar.
     })
     
     //static default props eğer belirlenen componentler gelmez ise varsayılan değer vermek için kullanabiliriz.
-    static default Props={
+    static defaultProps={
     	name:"Uğur" //eğer name props'u boş gelirse props'a "Uğur" değeri atanmış olur.
     }
 
