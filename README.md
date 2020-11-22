@@ -327,6 +327,7 @@ Bilgi tamamen durağansa ve hiç değişmeyeceğini biliyorsak bu componenti pre
 ![stateless component örn](https://github.com/UgurMamak/react-documentation/blob/master/images/7.png)
 
 setState işlemi tamamlandıktan sonra çalışacak fonksiyon aşağıdaki şekilde yazılabilir.
+
 	this.setState({
 	    someState: obj
 	}, () => {
