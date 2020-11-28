@@ -496,7 +496,7 @@ React'ta tekrar edilen yapıların tek bir yerden yönetilmesini sağlayan ileri
 				);
 		}
     }
-    export default LoaderHOC(Posts);
+    export default LoaderHOC(Posts,'posts');
     Postss.js
 
 ## Pure Component
