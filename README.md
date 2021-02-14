@@ -830,7 +830,7 @@ Objeler ve arrayler referans tiptir. Reducer'da state güncellediğimizde memory
 ### Redux Logger Middleware
 Önceki state, act.on ve action sonunda ki aktif state bilgilerini browser'a log olarak basmaya yarar.
 
-    npm install redux-logger
+    npm install redux-logger --save
 <br> Kullanımı 
 
     import  logger  from  'redux-logger';
