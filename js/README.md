@@ -225,7 +225,7 @@ Kodumuzda kullanmak için komut satırında eslint . yazmak yeterlidir. Daha ver
     { "env": { "browser": true, "jest": true, "es6": true }, "plugins": ["import"], "extends": "eslint:recommended", "parserOptions": { "ecmaVersion": 2018, "sourceType": "module" }, "rules": { "no-console": "warn", "no-eval": "error", "import/first": "error" } }
 
 
-https://gurolayanlar.com/eslint-prettier-ile-daha-guclu/
+[kaynak](https://gurolayanlar.com/eslint-prettier-ile-daha-guclu/)
 
 ## Prettier Nedir
 
@@ -235,7 +235,8 @@ Belirtilen stillere göre kod formatlayıcı olarak kullanılır.
     
 _.prettierrc_dosyası oluşturulur.
 
-https://gurolayanlar.com/eslint-prettier-ile-daha-guclu/
+[kaynak](https://gurolayanlar.com/eslint-prettier-ile-daha-guclu/)
+
 
 ## Webpack Nedir
 "Module Bundler"(Modül paketleyicisi) Yazdığımız kodları düzenler, Proje altındaki tüm dosyaları tek bir dosya altında birleştirir.
