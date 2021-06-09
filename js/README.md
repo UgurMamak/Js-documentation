@@ -10,16 +10,16 @@
   - [Object.assign](#Object-assign-[])
   - [Template Literals](#Template-Literals)
 - [Babel Nedir](#Babel-Nedir)
-- [Pollyfill Nedir?](#Pollyfill-Nedir-?)
-- [ESlint Nedir?](#Eslint-Nedir-?)
-- [Prettier Nedir?](#Prettier-Nedir-?)
-- [Webpack Nedir?](#Webpack-Nedir-?)
+- [Pollyfill Nedir](#Pollyfill-Nedir)
+- [ESlint Nedir](#Eslint-Nedir)
+- [Prettier Nedir](#Prettier-Nedir)
+- [Webpack Nedir](#Webpack-Nedir)
+- [Scope](Scope(Let-const-var))
 
-
-## JS-Nedir?
+## JS-Nedir
 Web tarafında çalışan dinamik programlama dilidir. Tarayıcı içerisinde bulunan engine (motor) ile çalıştırılır.
 
-## Modern JS Nedir?
+## Modern JS Nedir
 Node.js, npm, ve js kütüphanelerinin olması modern js'in kullanımını artırdı.
 Node.js yapısı: js kodlarını makine kodlarına çevirir.
 Node.js'den önce yazdığımız kodlar sadece tarayıcı içindeki js motorları ile anlaşılır hale getiriliyordu.
@@ -187,7 +187,7 @@ Sadece ES6 kullanmamızı sağlamakla kalmaz. Aynı zamanda polyfill desteği il
     
     start:"babel-node index.js --preset es2015" (package.json'da scripts içine yazılır.)
 
-### Pollyfill Nedir?
+### Pollyfill Nedir
 https://medium.com/bili%C5%9Fim-hareketi/babel-polyfilling-nedir-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-46b4cd08c634
 
 Babel kodu derlerken  onu dönüştürür. Pollyfilling, tarayıcıya yeni işlevler ekliyor.
@@ -197,7 +197,7 @@ Eğer kodunuzda polyfilling kullanmanız gerekiyorsa kurulum için:
     npm install babel-polyfill
 
 
-## Eslint Nedir?
+## Eslint Nedir
 
 Js kodunda bulunan sorunlu kalıpları tanımlamak için statik bir kod analiz aracıdır.
 Hataların altını kırmızı ile çizer. Aynı zamanda belirlenen standartlara uymayan kodlarında altını çizer.
@@ -231,7 +231,7 @@ Kodumuzda kullanmak için komut satırında eslint . yazmak yeterlidir. Daha ver
 
 https://gurolayanlar.com/eslint-prettier-ile-daha-guclu/
 
-## Prettier Nedir?
+## Prettier Nedir
 
 Belirtilen stillere göre kod formatlayıcı olarak kullanılır.
 
@@ -241,7 +241,7 @@ _.prettierrc_dosyası oluşturulur.
 
 https://gurolayanlar.com/eslint-prettier-ile-daha-guclu/
 
-## Webpack Nedir?
+## Webpack Nedir
 "Module Bundler"(Modül paketleyicisi) Yazdığımız kodları düzenler, Proje altındaki tüm dosyaları tek bir dosya altında birleştirir.
 
     module.exports = {  
