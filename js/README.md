@@ -172,30 +172,26 @@ browser tarafında çalışan ve nodejs ile çalışan kodlar arasındaki fark b
 
 
 ## Babel Nedir
-https://medium.com/hepsiburadatech/babel-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-f1b4a68c8120  (ek kaynak aşağıdakilerden ayrı)
-
-Javascript kodunu browserlar calistirir. Tıpkı html ve css gibi. Bugünkü browserlar(Chrome, Firefox, İnternet Explorer vs.) javascript’in es5 sürümünü biliyorlar.
+ Javascript kodunu browserlar calistirir. Tıpkı html ve css gibi. Bugünkü browserlar(Chrome, Firefox, İnternet Explorer vs.) javascript’in es5 sürümünü biliyorlar.
 
 ES6 bütün tarayıcılarda uyumlu olmadığı için bütün tarayıcılarda uyumlu olan ES5'e dönüştürerek kodların çalışabilir olmasını sağlayan açık kaynak kodlu javascript  transcompilerdır (Js derleyicisidir).
 
-ES6 standardını ES5 standardına çevirmeyi sağlar. 
+ES6 standardını ES5 standardına çevirmeyi sağlar. [kaynak](https://medium.com/hepsiburadatech/babel-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-f1b4a68c8120)
 
-Sadece ES6 kullanmamızı sağlamakla kalmaz. Aynı zamanda polyfill desteği ile ES7, JSX gibi başka standartları kullanmamıza imakn sunar.
-(https://medium.com/hepsiburadatech/babel-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-f1b4a68c8120)
+Sadece ES6 kullanmamızı sağlamakla kalmaz. Aynı zamanda polyfill desteği ile ES7, JSX gibi başka standartları kullanmamıza imakn sunar. [kaynak](https://medium.com/hepsiburadatech/babel-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-f1b4a68c8120)
  
     npm i babel-cli babel-preset-es2015 --save 
     
     start:"babel-node index.js --preset es2015" (package.json'da scripts içine yazılır.)
 
 ### Pollyfill Nedir
-https://medium.com/bili%C5%9Fim-hareketi/babel-polyfilling-nedir-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-46b4cd08c634
-
 Babel kodu derlerken  onu dönüştürür. Pollyfilling, tarayıcıya yeni işlevler ekliyor.
 
 Eğer kodunuzda polyfilling kullanmanız gerekiyorsa kurulum için:
 
     npm install babel-polyfill
 
+[kaynak](https://medium.com/bili%C5%9Fim-hareketi/babel-polyfilling-nedir-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-46b4cd08c634)
 
 ## Eslint Nedir
 
@@ -262,9 +258,9 @@ Daha hızlı yeniden oluşturma için yalnızca src içindeki dosyalar webpack t
 -   Plugins (eklentiler)
 -   Mode (PROD ve DEV modları)
 -   Browser Compatibility (tarayıcı uyumluluğu) şeklindedir.
-- 
-https://webpack.js.org/ (yapısı ve görevleri için inceler)
-https://devnot.com/2021/webpack-nedir-webpacke-detayli-bir-bakis/
+[kaynak](https://devnot.com/2021/webpack-nedir-webpacke-detayli-bir-bakis/)
+[webpack](https://webpack.js.org/)
+
 
 
 ## Scope
