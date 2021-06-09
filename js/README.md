@@ -9,11 +9,11 @@
   - [Array.Filter Operatör](#Filter-Operatör)
   - [Object.assign](#Object-assign-[])
   - [Template Literals](#Template-Literals)
-- [Babel Nedir?](#Babel-Nedir?)
-- [Pollyfill Nedir?](#Pollyfill-Nedir?)
-- [ESlint Nedir?](#Eslint-Nedir?)
-- [Prettier Nedir?](#Prettier-Nedir?)
-- [Webpack Nedir?](#Webpack-Nedir?)
+- [Babel Nedir](#Babel-Nedir)
+- [Pollyfill Nedir?](#Pollyfill-Nedir-?)
+- [ESlint Nedir?](#Eslint-Nedir-?)
+- [Prettier Nedir?](#Prettier-Nedir-?)
+- [Webpack Nedir?](#Webpack-Nedir-?)
 
 
 ## JS-Nedir?
@@ -171,7 +171,7 @@ browser tarafında çalışan ve nodejs ile çalışan kodlar arasındaki fark b
 
 
 
-## Babel Nedir?
+## Babel Nedir
 https://medium.com/hepsiburadatech/babel-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-f1b4a68c8120  (ek kaynak aşağıdakilerden ayrı)
 
 Javascript kodunu browserlar calistirir. Tıpkı html ve css gibi. Bugünkü browserlar(Chrome, Firefox, İnternet Explorer vs.) javascript’in es5 sürümünü biliyorlar.
