@@ -1,54 +1,47 @@
 # React Dokümantasyon
 
- 1. [DOM](#DOM)
- 2.  [Virtual DOM](#Virtual-DOM)
- 3. [One-Way Binding  ve Two-Way Binding](One-Way-binding-ve-Two-Way-Binding)
- 4. [EcmaScript 6 Bilinmesi Gerekenler](#EcmaScript-6-Bilinmesi-Gerekenler)
-	 - [Spread Operatör](#Spread-Operatör)
-	 - [Array.map() Operatör](#Map-Operatör)
-	 - [Array.Filter Operatör](#Filter-Operatör)
-	- [Object.assign](#Object-assign-[])
- 5. [Babel Nedir?](#Babel-Nedir?)
- 6. [Webpack Nedir?](#Webpack-Nedir?)
- 7. [Create React App](#Create-React-App)
- 8. [Propslar](#Propslar)
+- [DOM](#DOM)
+- [Virtual DOM](#Virtual-DOM) 
+- [One-Way Binding  ve Two-Way Binding](One-Way-binding-ve-Two-Way-Binding)
+- [Create React App](#Create-React-App)
+- [Propslar](#Propslar)
 	- [PropTypes](#PropTypes)
- 9. [Eventler](#Events)
- 10. [State'ler](#State'ler )
-	  - [Statefull ve stateless componentler](#Statefull-ve-Statelesss-Componentler)
- 11. [Lifecycle (Yaşam Döngüsü)](#Lifecycle)
-	  - [Initialization](#Initialization)
-		  - [constructor](#Initialization)
-	  - [Mounting](#Mounting)
-		  - [componentWillMount](#componentWillMount)
-		  -  [componentDidMount](#componentDidMount)
-	  - [Updation](#Updation)
-	  	  -  [componentWillReceiveProps](#componentWillReceiveProps)
-		  -  [ShouldcomponentUpdate](#shouldComponentUpdate)
-		  - [ComponentWillUpdate](#componentWillUpdate)
-		  - [ComponentDidUpdate](#componentDidUpdate)
-12. [Fetching](#Fetching)
-13. [React Router](#React-Router)
-	- [Link](#Link )
+- [Eventler](#Events)
+- [State'ler](#State'ler )
+  - [Statefull ve stateless componentler](#Statefull-ve-Statelesss-Componentler)
+- [Lifecycle (Yaşam Döngüsü)](#Lifecycle)
+  - [Initialization](#Initialization)
+    - [constructor](#Initialization)
+  - [Mounting](#Mounting)
+	- [componentWillMount](#componentWillMount)
+	-  [componentDidMount](#componentDidMount)
+  - [Updation](#Updation)
+	 -  [componentWillReceiveProps](#componentWillReceiveProps)
+	 -  [ShouldcomponentUpdate](#shouldComponentUpdate)
+	 - [ComponentWillUpdate](#componentWillUpdate)
+	 - [ComponentDidUpdate](#componentDidUpdate)
+- [Fetching](#Fetching)
+- [React Router](#React-Router)
+    - [Link](#Link )
 	- [Redirect](#Redirect) 
 	- [Switch](#switch)
-14. [High Order Component](#High-Order-Component)
-15. [Pure component](#Pure-Component)
-16. [Redux](#Redux)
-	  - [Action](#Action)
-	  - [Reducer](#Reducer)
-	  - [Store](#Store)
-	  - [Merge Props](#Merge-props)
-	  - [Redux Thunk Middleware](#Redux-Thunk-Middleware)
-	  - [AsyncAwait-Yapısı-ile-Servis-Çağrımı](#AsyncAwait-Yapısı-ile-Servis-Çağrımı)
-	  - [Immutable Mutable](#Immutable-Mutable)
-	  - [Immutable Array](#Immutable-Array)
-	  - [Redux Logger Middleware](#Redux-Logger-Middleware)
-	  - [Async Action Pattern](#Async-Action-Patterns)
-	  - [Async Actions Pattern Redux Promise Middleware](#Redux-Promise-Middleware)
-17. [NOTLAR](#NOTLAR)
-18. [Kısaltmalar](#Kısaltmalar)
-19. [#Kaynakça](#Kaynakça)
+- [High Order Component](#High-Order-Component)
+- [Pure component](#Pure-Component)
+- [Redux](#Redux)
+  - [Action](#Action)
+  - [Reducer](#Reducer)
+  - [Store](#Store)
+  - [Merge Props](#Merge-props)
+  - [Redux Thunk Middleware](#Redux-Thunk-Middleware)
+  - [AsyncAwait-Yapısı-ile-Servis-Çağrımı](#AsyncAwait-Yapısı-ile-Servis-Çağrımı)
+  - [Immutable Mutable](#Immutable-Mutable)
+  - [Immutable Array](#Immutable-Array)
+  - [Redux Logger Middleware](#Redux-Logger-Middleware)
+  - [Async Action Pattern](#Async-Action-Patterns)
+  - [Async Actions Pattern Redux Promise Middleware](#Redux-Promise-Middleware)
+- [NOTLAR](#NOTLAR)
+- [Kısaltmalar](#Kısaltmalar)
+- [#Kaynakça](#Kaynakça)
 
 
 
@@ -110,100 +103,6 @@ değişkenlerin ve değerlerin view tarafına aktarımıdır. React'ta JSX taraf
 View tarafına aktarılan data arka taraftanda dinlenmektedir. data<=>view olayına denir [3].
 
 ![alt text](https://github.com/UgurMamak/react-documentation/blob/master/images/4.png)
-
-## EcmaScript 6 Bilinmesi Gerekenler
-Ecmascript javascript dilinin standartlaştırılmış sürümünün adıdır.
-### Spread Operatör
-yaymak anlamına gelir. kopyalayarak kullanır.
-
-    foo(...operate); şeklinde kullanılır.
-    
- 
-**Fonksiyonlara parametre olarak array geçmek gereken durumlarda kullanılabilir.**
- Birden fazla parametre alan bir fonksiyona parametre olarak elimizde bulunan bir arrayi geçmek istediğimizde aşağıdaki şekilde apply kullanmak gerekiyordu [4].
- 
-    function myFunction(x, y, z) { }  
-    var array1 = [0, 1, 2];  
-    myFunction.apply(null, array1);
-spread operatörü ile bu kullanıma gerek kalmadı.
-
-    myFunction(...array1);
-
- **Başka arraylari de dahil ederek yeni array oluşturulan durumlarda kullanılabilir.**
-  
-    var data = [3,4];  
-    var newData = [1,2, ...data, 5,6]; //1,2,3,4,5,6 şeklinde olur.
-
- **Bir arrayden kopya array oluşturmak**
-Bir array'i kopyalamak için slice metodu kullanılıyordu. yenisinde kullanım şu şekilde
-    
-    var arr = [1, 2, 3];  
-    var arr2 = [...arr]; // like arr.slice()  
-    arr2.push(4);
- 
-
-**Math fonksiyonunda kullanmak**
-
-    let numbers = [9, 4, 7, 1];  
-    Math.min(...numbers); // 1
-
- **NodeList’ten dönen değeri diziye çevirmek**
-
-    [...document.querySelectorAll('div')]
-
-### Map Operatör
-Array üzerinde gezinme ve işlem yapabilmek için kullanılır. 
-
-> Map array'in kopyasını alarak üzerinde işlem yapar. Foreach direk array üzerinde çalışır.
-
-    const array1 = [1, 4, 9, 16];
-    
-    // pass a function to map
-    const map1 = array1.map(x => x * 2);
-    
-    console.log(map1);
-    // expected output: Array [2, 8, 18, 32]
-
-
-### Filter Operatör
-data içerisinde filtreleme yapmak için kullanılır.
-
-    const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-    const result = words.filter(word => word.length > 6);
-    console.log(result);
-    // expected output: Array ["exuberant", "destruction", "present"]
-
-### Object assign []
-Objectleri birbiri üzerine kopyalanmasını sağlayan fonksiyondur.
-
-Object.assign(hedef_nesne, ..._kaynak_nesneler_)
-Object.assign(kopyalandığı yer, kopyalanan data)
-
-    var obj1 = { a: 1 };
-    var obj2={b:2}
-    Object.assign(obj1,obj2);
-    console.log(obj1); // {a: 1, b: 2}
-.
-
-    const personel = {name: "Uğur", surname: "Mamak"};  
-    const personel2 = personel;  
-    personel2.name = "Uğur2";  
-    console.log(personel);  { name: ‘Uğur2’, surname: ‘Mamak’ }
-    console.log(personel2);{ name: ‘Uğur2’, surname: ‘Mamak’ }
-
-> nesneleri birbirine eşitleyerek atama işlemi yapabiliriz. Fakat bu şekilde kullanım olursa yukarıdaki gibi personel2'nin değerini değiştirdiğimizde personel değişkeninin de değeri değişir. Çünkü **Javascript’te array ve object tipleri referanstır.** Yani değişkenler, bilgilerin bellekteki adreslerini tutarlar.
-
-## Babel Nedir?
-ES6 standdartını ES5 standartına çevirmeyi sağlar. ES6 bütün tarayıcılarda uyumlu olmadığı için bütün tarayıcılarda uyumlu olan ES5'e dönüştürerek kodların çalışabilir olmasını sağlayan açık kaynak kodlu javascript  transcompilerdır.
- 
-    npm i babel-cli babel-preset-es2015 --save 
-    
-    start:"babel-node index.js --preset es2015" (package.json'da scripts içine yazılır.)
-
-## Webpack Nedir?
-Modül paketleyicisidir. Proje altındaki tüm js, stil, resim vb dosyaları alarak tek bir dosya altında birleştirir.
-Daha hızlı yeniden oluşturma için yanlızca src içindeki dosyalar webpack tarafından işlenir. Herhangi bir js ve css dosyasını src içine koymanız gerekir, aksi taktirde webpack bunları görmez.
-
 
 
 ## Create React App
