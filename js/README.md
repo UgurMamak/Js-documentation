@@ -14,7 +14,7 @@
 - [ESlint Nedir](#Eslint-Nedir)
 - [Prettier Nedir](#Prettier-Nedir)
 - [Webpack Nedir](#Webpack-Nedir)
-- [Scope](#Scope(Let-const-var))
+- [Scope](#Scope)
 
 ## JS-Nedir
 Web tarafında çalışan dinamik programlama dilidir. Tarayıcı içerisinde bulunan engine (motor) ile çalıştırılır.
@@ -267,7 +267,7 @@ https://webpack.js.org/ (yapısı ve görevleri için inceler)
 https://devnot.com/2021/webpack-nedir-webpacke-detayli-bir-bakis/
 
 
-## Scope(Let-const-var)
+## Scope
 
 scope: yazdığımız değişkenin hangi kod parçası tarafından ulaşılabilir olup olmamasıyla alakalıdır. 
 
