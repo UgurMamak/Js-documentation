@@ -44,3 +44,95 @@ TLS(TypeScript Dil Servisi):Editörlerde kullanılması için otomatik tamamlama
 # Kurulum
     npm i -g typescript
     tsc --version
+    
+   
+   
+//************* 
+# Düzenle**
+
+ts dosyası js derleyicisi tarafından tanınmaz. Bu yüzden ts dosyasını compiler aracılığıyla js dosyası haline getirmeliyiz.
+cmd ekranında **tsc dosyaName.ts** yazarak compiler edebiliriz.
+
+## Types
+js'de hata vermez Ts'de verir.
+
+    let number=5;
+    number='a';
+    //hata vermez çünkü let a; any olarak belirtilmiş herhangi bir type alabilir .
+    let a;
+    a=5;
+    a='a';
+    a=true;
+    
+    let a:number=5;
+    let b:string='a';
+    let c:boolean=true;
+    let d:any;
+    let e:number[]=[1,2,3]
+    let f:Array<number>[1,2,3,]
+    let g:any[]=[1,'a',true]
+    let h:[string,number,boolean]=['a',5,true]
+
+e=f 
+g'de ki gibi array type'ını belirtmeden de array oluşturabiliriz.
+
+    enum Payment{kredi,havale,eft}
+    
+    let kredi=Payment.kredi;//0 indis numaralarını tutar.
+    let havale=Payment.havale;//1
+    let eft=Payment.eft;//2
+
+## Type Assertions(Tür Dönüşümü)
+
+    let message='Hello world';
+    message.length; //başlangıçta değer ataması yaparak string türünde olduğunu belirtmiş olduk. Bu sayede length  çalışabiliyor.
+
+<br>
+
+    let message;
+    message='Hello world'
+    message.length; //bu şekilde olunca length çalışmaz. çünkü başlangıçta message değişkenin type'ı **any** olarak gözükür.
+
+<br>
+
+
+    let message;
+    message='Hello world';
+
+let count=(<string>message).length; 
+let a=(message as string).length; //değişkeni any olarak tanımladıysak bu iki şekilde tür dönüşümü yaparak length özelliğini kullanabiliriz.
+
+## Functions
+
+    functions getAverage(a,b,c){
+    const result=(a+b+c)/3;
+    return 'result':+result;
+    }
+    getAverage(10,20,30);
+
+yukarıdaki şekilde yaptığımızda fonksiyon çalışır fakat fonksiyona parametre olarak string değer verdiğimizde derleyince hata alırız. 
+Programlama aşamasında hatayı görebilmek için 
+functions getAverage(a:number,b:number,c?:number):string
+{}
+şeklinde tanımlama yaparak programlama aşaamasında hatayı görebileceğiz.
+en sondaki **string** 'in anlamı fonksiyonun string bir değer return edeceği anlamına gelir.
+
+c? işaretinin anlamı fonksiyon 2 veya 3 paametre alabilir anlamına gelir yani c değeri parametre olarak gelebilir veya gelmeyebilir anlamına geliyor.
+
+functions getAverage(...a:number[]):string // gelen parametre sayısı belirsiz ise bu şekilde kullanabiliriz.
+
+const getAverage=():void=>{
+} //arrow function şeklinde tanımlama yapabiliriz. void return değeri olmayacağını gösterir.
+
+## Interface
+new keyword'ü kullanılmaz.
+Bir sınıfın ne yapması gerektiğini belirtir. nasıl yapması gerektiğini değil
+Default olarak tüm interface üyeleri abstract ve public olarak tanımlanır.
+içerisinde yalnızca metodların imzaları yer alır, içi dolu metot bulundurmazlar.
+
+## Access Modifiers
+
+default olarak public'dir.
+
+## NOT
+fonksiyonlar interface ve class içerisinde metot olarak tanımlanır.
