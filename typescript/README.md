@@ -48,7 +48,6 @@ TLS(TypeScript Dil Servisi):Editörlerde kullanılması için otomatik tamamlama
    
    
 //************* 
-# Düzenle**
 
 ts dosyası js derleyicisi tarafından tanınmaz. Bu yüzden ts dosyasını compiler aracılığıyla js dosyası haline getirmeliyiz.
 cmd ekranında **tsc dosyaName.ts** yazarak compiler edebiliriz.
